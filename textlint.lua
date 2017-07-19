@@ -20,7 +20,7 @@ end
 function split(str,sep)
    local result = {}
    local regex = ("([^%s]+)"):format(sep)
-   for each in utf8.gmatch(str, regex) do
+   for each in string.gmatch(str, regex) do
       table.insert(result, each)
    end 
    return result
@@ -43,7 +43,7 @@ function onExit(output, errorformat)
        -- Trim whitespace
       line = line:match("^%s*(.+)%s*$")
       if string.find(line, regex) then
-         local line, column, msgs = utf8.match(line, regex)
+         local line, column, msgs = string.match(line, regex)
          local m = ""
          for msg in utf8.gmatch(msgs,"(.)") do
             if utf8.find(msg,"%w|-") then
