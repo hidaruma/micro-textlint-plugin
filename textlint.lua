@@ -46,7 +46,11 @@ function onExit(output, errorformat)
          local line, column, msgs = utf8.match(line, regex)
          local m = ""
          for msg in utf8.gmatch(msgs,"(.)") do
-            m = m .. msg .. " "
+            if utf8.find(msg,"%w|-") then
+               m = m .. msg
+            else
+               m = m .. msg .. " "
+            end
          end
             CurView():GutterMessage("textlint", tonumber(line), m, 2)
       end
