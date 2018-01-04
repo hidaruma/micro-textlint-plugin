@@ -5,10 +5,10 @@
 	"Versions": [
 	{
 		"Version": "0.2.0",
-		"Url": "https://github.com/hidaruma/micro-textlint-plugin/archive/v0.2.0.zip"
+		"Url": "https://github.com/hidaruma/micro-textlint-plugin/archive/v0.2.0.zip",
 		"Require": {
-			"micro: ">=1.2.1"		
+			"micro": ">=1.2.1"
 			}
-		}		
+		}	
 	]
 }]
